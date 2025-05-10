@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Space Explorer 🚀</h1>
+        <p>Your interactive journey through the cosmos</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Event Handling -->
+        <section id="event-section">
+            <h2>Control Center</h2>
+            <div class="control-panel">
+                <button id="launch-btn">Launch Rocket</button>
+                <div id="hover-area">Hover over me for space facts</div>
+                <div id="fact-display"></div>
+                <div id="key-detector">
+                    <p>Press any key to navigate</p>
+                    <div id="key-display">No key pressed yet</div>
+                </div>
+                <div id="secret-area">Double-click for a secret mission</div>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive Elements -->
+        <section id="interactive-section">
+            <h2>Galactic Showcase</h2>
+            
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <h3>Space Gallery</h3>
+                <div class="gallery-container">
+                    <button id="prev-btn">◀</button>
+                    <div class="image-container">
+                        <img id="gallery-img" src="/api/placeholder/800/400" alt="Space image">
+                        <p id="image-caption">Explore the cosmos</p>
+                    </div>
+                    <button id="next-btn">▶</button>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <h3>Mission Info</h3>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="planets">Planets</button>
+                    <button class="tab-btn" data-tab="satellites">Satellites</button>
+                    <button class="tab-btn" data-tab="astronauts">Astronauts</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="planets-panel">
+                        <h4>Explore Planets</h4>
+                        <p>Our solar system has eight recognized planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.</p>
+                    </div>
+                    <div class="tab-panel" id="satellites-panel">
+                        <h4>Satellite Technology</h4>
+                        <p>Satellites help us with communication, navigation, weather forecasting, and space observation.</p>
+                    </div>
+                    <div class="tab-panel" id="astronauts-panel">
+                        <h4>Meet the Crew</h4>
+                        <p>Astronauts undergo years of rigorous training before embarking on space missions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion -->
+            <div class="accordion-container">
+                <h3>Space FAQs</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">How far is space?</div>
+                        <div class="accordion-content">
+                            <p>Space is generally considered to begin at the Kármán line, which is 100 km (62A miles) above Earth's surface.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">How long does it take to reach the moon?</div>
+                        <div class="accordion-content">
+                            <p>It takes about 3 days for a spacecraft to reach the Moon from Earth.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">What is a light year?</div>
+                        <div class="accordion-content">
+                            <p>A light year is the distance light travels in one year, approximately 9.46 trillion kilometers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Form Validation -->
+        <section id="form-section">
+            <h2>Mission Registration</h2>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                    <div class="password-strength">
+                        <div class="strength-bar" id="strength-bar"></div>
+                        <span id="strength-text">Password strength</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mission">Select Mission</label>
+                    <select id="mission" name="mission" required>
+                        <option value="">-- Select a mission --</option>
+                        <option value="mars">Mars Colony</option>
+                        <option value="moon">Lunar Base</option>
+                        <option value="iss">Space Station Visit</option>
+                    </select>
+                    <span class="error-message" id="mission-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the mission terms</label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+                
+                <button type="submit">Register for Mission</button>
+            </form>
+            <div id="submission-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Space Explorer Program</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
